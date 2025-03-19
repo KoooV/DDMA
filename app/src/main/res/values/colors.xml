@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_primary">#6750A4</color>
+    <color name="light_on_primary">#FFFFFF</color>
+    <color name="light_surface">#FEF7FF</color>
+    <color name="dark_primary">#D0BCFF</color>
+    <color name="dark_on_primary">#000000</color>
+    <color name="dark_surface">#141218</color>
+    <color name="switch_track">#757575</color>
+    <color name="switch_thumb">#BDBDBD</color>
+</resources>

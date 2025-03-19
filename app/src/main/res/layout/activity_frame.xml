@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="5dp"
+        android:text="Enter age"
+        android:textSize="24sp"
+        />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="text"
+        android:text="" />
+
+    <ImageButton
+        android:id="@+id/confBtn2"
+        android:layout_width="134dp"
+        android:layout_height="77dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@null"
+        app:srcCompat="@drawable/confbtn"
+        android:translationY="-250dp"
+        />
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="83dp"
+        android:layout_height="79dp"
+        android:background="@null"
+        app:srcCompat="@drawable/back"
+        />
+
+</FrameLayout>
