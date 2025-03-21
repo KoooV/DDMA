@@ -1,23 +1,15 @@
 package com.example.ddma_transferobject;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity { // Наследование от AppCompatActivity
-
+public class MainActivity extends AppCompatActivity {
     private EditText editText;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +20,9 @@ public class MainActivity extends AppCompatActivity { // Наследовани�
 
         editText = findViewById(R.id.editText1);
 
-
         findViewById(R.id.btnSettings).setOnClickListener(v -> {
             startActivity(new Intent(this, SettingsActivity.class));
         });
-
         findViewById(R.id.confBtn1).setOnClickListener(v ->{
 
             String inputText = editText.getText().toString().trim();
@@ -43,20 +33,13 @@ public class MainActivity extends AppCompatActivity { // Наследовани�
                 editor.putString("USER_NAME", inputText);
                 editor.apply();
 
-
                 Intent intent = new Intent(MainActivity.this, FrameActivity.class);
                 startActivity(intent);
-
             }
             else{
                 editText.setError("Empty field");
             }
-
-
                 }
                 );
-
-
     }
-
 }

@@ -1,11 +1,9 @@
 package com.example.ddma_transferobject;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,7 +20,6 @@ public class RelativeActivity extends AppCompatActivity {
         findViewById(R.id.backBtn2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 onBackPressed();
             }
         });
@@ -41,12 +38,10 @@ public class RelativeActivity extends AppCompatActivity {
             else{
                 editText.setError("Empty field");
             }
-
         });
     }
         public void onBackPressed(){
             super.onBackPressed();
-
     }
 }
 

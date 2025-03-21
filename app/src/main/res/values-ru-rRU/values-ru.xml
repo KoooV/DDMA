@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DDMA_transferObject</string>
+    <string name="en_name">Введите свое имя</string>
+    <string name="en_age">Введите свой возраст</string>
+    <string name="en_group">Введите свою группу</string>
+</resources>

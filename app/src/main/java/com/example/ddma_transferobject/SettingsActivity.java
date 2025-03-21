@@ -1,21 +1,16 @@
 package com.example.ddma_transferobject;
-
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.view.View;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
 public class SettingsActivity extends AppCompatActivity {
-
     private SwitchMaterial switchTheme;
 
     @Override
@@ -55,12 +50,10 @@ public class SettingsActivity extends AppCompatActivity {
     public void onBackPressed(){
         super.onBackPressed();
     }
-
     private boolean isDarkThemeEnabled() {
         SharedPreferences prefs = getSharedPreferences("settings", Context.MODE_PRIVATE);
         return prefs.getBoolean("dark_theme", false);
     }
-
     private void setDarkTheme(boolean enabled) {
         int mode = enabled ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO;
         AppCompatDelegate.setDefaultNightMode(mode);
@@ -69,5 +62,4 @@ public class SettingsActivity extends AppCompatActivity {
         editor.putBoolean("dark_theme", enabled);
         editor.apply();
     }
-
 }

@@ -1,9 +1,7 @@
 package com.example.ddma_transferobject;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,10 +28,6 @@ public class LinearActivity extends AppCompatActivity {
         userName.setText("Name: "+ savedName);
         userAge.setText("Age: " + savedAge);
         userGroup.setText("Group: " + savedGroup);
-
-
-
     }
-
 }
 
