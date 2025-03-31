@@ -21,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CPU"/>
+        <activity android:name=".RAM"/>
+        <activity android:name=".ROM"/>
     </application>
 
 </manifest>

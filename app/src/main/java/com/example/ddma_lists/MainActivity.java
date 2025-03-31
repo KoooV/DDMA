@@ -2,6 +2,9 @@ package com.example.ddma_lists;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,30 +18,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private RecyclerView categoriesRecyclerView;
-    private List<String> categories = new ArrayList<>();
+    String[] user = {"CPU", "RAM", "ROM"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // Заполнение списка категорий
-        categories.add("Яблоки");
-        categories.add("Груши");
-        categories.add("Бананы");
+        ListView listView = findViewById(R.id.list_view);
 
-        // Настройка RecyclerView
-        categoriesRecyclerView = findViewById(R.id.categoriesRecyclerView);
-        categoriesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        CategoryAdapter adapter = new CategoryAdapter(categories, this::onCategoryClick);
-        categoriesRecyclerView.setAdapter(adapter);
-    }
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, user);// адаптер
 
-    // Обработка выбора категории
-    private void onCategoryClick(String category) {
-        Intent intent = new Intent(this, SecondActivity.class);
-        intent.putExtra("category", category);
-        startActivity(intent);
+        listView.setAdapter(adapter);//привязка адаптера к listView
+
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+            String selectedItem = user[position];
+            if (position == 0){
+                Intent intent = new Intent(MainActivity.this, CPU.class);
+                startActivity(intent);
+            }
+            if (position == 1){
+                Intent intent2 = new Intent(MainActivity.this, RAM.class);
+                startActivity(intent2);
+            }
+            if (position == 2){
+                Intent intent3 = new Intent(MainActivity.this, ROM.class);
+                startActivity(intent3);
+            }
+
+        });
+
+
     }
 }
