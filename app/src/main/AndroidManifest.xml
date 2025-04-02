@@ -24,6 +24,8 @@
         <activity android:name=".CPU"/>
         <activity android:name=".RAM"/>
         <activity android:name=".ROM"/>
+        <activity android:name=".RecyclerActivity"/>
+        <activity android:name=".ScrollActivity"/>
     </application>
 
 </manifest>

@@ -46,9 +46,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent3 = new Intent(MainActivity.this, ROM.class);
                 startActivity(intent3);
             }
-
         });
 
+        findViewById(R.id.recycler_btn).setOnClickListener(v ->{
+            Intent intent4 = new Intent(MainActivity.this, RecyclerActivity.class);
+            startActivity(intent4);
+        });
+
+        findViewById(R.id.scroll_btn).setOnClickListener(v ->{
+            Intent intent5 = new Intent(MainActivity.this, ScrollActivity.class);
+            startActivity(intent5);
+        });
 
     }
 }
