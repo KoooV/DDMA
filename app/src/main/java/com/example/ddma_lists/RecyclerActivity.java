@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -30,12 +31,11 @@ public class RecyclerActivity extends AppCompatActivity{
 
         // Подготовка данных
         ArrayList<Notebook> notebooks = new ArrayList<>();
-        Collections.addAll(notebooks,
-                new Notebook("Apple", "M1"),
-                new Notebook("Honor", "Ryzen 5"),
-                new Notebook("Msi", "Core i7"),
-                new Notebook("Apple", "M2 pro"),
-                new Notebook("Apple", "M4 max"));
+        notebooks.add(new Notebook("Apple", "M1", R.drawable.ic_apple_m1));
+        notebooks.add(new Notebook("Honor", "Ryzen 5",R.drawable.ic_honor_5));
+        notebooks.add(new Notebook("Msi", "Core i7", R.drawable.ic_msi_i7));
+        notebooks.add(new Notebook("Apple", "M2 pro", R.drawable.ic_apple_m2pro));
+        notebooks.add(new Notebook("Apple", "M4 max",R.drawable.ic_apple_m4max));
 
         // Установка адаптера
         ReAdapter adapter = new ReAdapter(notebooks);
