@@ -58,5 +58,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent5);
         });
 
+        findViewById(R.id.spinner_btn).setOnClickListener(v->{
+            Intent intent6 = new Intent(MainActivity.this, SpinnerActivity.class);
+            startActivity(intent6);
+        });
+
     }
 }

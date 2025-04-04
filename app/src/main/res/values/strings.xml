@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">DDMA_LIsts</string>
+    <string name="app_name">Spinner Demo</string>
+    <string name="spinner_prompt">Выберите элемент</string>
+
+    <string-array name="spinner_items">
+        <item>Элемент 1</item>
+        <item>Элемент 2</item>
+        <item>Элемент 3</item>
+        <item>Элемент 4</item>
+    </string-array>
 </resources>

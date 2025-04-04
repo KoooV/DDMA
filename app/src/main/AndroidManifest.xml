@@ -26,6 +26,7 @@
         <activity android:name=".ROM"/>
         <activity android:name=".RecyclerActivity"/>
         <activity android:name=".ScrollActivity"/>
+        <activity android:name=".SpinnerActivity"/>
     </application>
 
 </manifest>
