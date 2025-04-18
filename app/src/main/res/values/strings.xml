@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DDMA_Service</string>
+    <string name="write_something_here">Write something here</string>
 </resources>
