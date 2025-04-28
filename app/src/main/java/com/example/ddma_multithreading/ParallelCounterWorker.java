@@ -7,11 +7,12 @@ import androidx.annotation.NonNull;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
-public class MyWorker extends Worker {
-    private static final String TAG = "MyWorker";
-    private static final String KEY_COUNTER = "counter";
+public class ParallelCounterWorker extends Worker {
+    private static final String TAG = "ParallelCounter";
+    private static final String KEY_COUNTER = "parallel_counter";
+    private static final int MAX_COUNT = 3;
 
-    public MyWorker(@NonNull Context context, @NonNull WorkerParameters params) {
+    public ParallelCounterWorker(@NonNull Context context, @NonNull WorkerParameters params) {
         super(context, params);
     }
 
@@ -22,11 +23,17 @@ public class MyWorker extends Worker {
             // Получаем текущее значение счетчика
             int counter = getInputData().getInt(KEY_COUNTER, 0);
             
+            // Проверяем, не достигли ли мы максимума
+            if (counter >= MAX_COUNT) {
+                Log.d(TAG, "Counter reached maximum value: " + MAX_COUNT);
+                return Result.success();
+            }
+            
             // Увеличиваем счетчик
             counter++;
             
             // Логируем текущее значение
-            Log.d(TAG, "Current counter value: " + counter);
+            Log.d(TAG, "Parallel counter value: " + counter);
             
             // Создаем выходные данные с обновленным значением счетчика
             androidx.work.Data outputData = new androidx.work.Data.Builder()
@@ -35,8 +42,8 @@ public class MyWorker extends Worker {
             
             return Result.success(outputData);
         } catch (Exception e) {
-            Log.e(TAG, "Error in worker: " + e.getMessage());
+            Log.e(TAG, "Error in parallel worker: " + e.getMessage());
             return Result.failure();
         }
     }
-}
+} 
