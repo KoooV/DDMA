@@ -7,67 +7,78 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:layout_marginTop="48dp">
 
-        <!-- Существующие элементы -->
+        <!-- Секция SharedPreferences -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Работа с SharedPreferences"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp"/>
+
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="104dp"
-            android:ems="10"
+            android:hint="Введите имя"
             android:inputType="text"
-            android:text="Name"
             android:layout_marginBottom="8dp"/>
 
-        <Button
-            android:id="@+id/saveBtn"
-            android:layout_width="175dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="40dp"
-            android:text="Save"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="8dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
 
-        <Button
-            android:id="@+id/checkBtn"
-            android:layout_width="175dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="108dp"
-            android:layout_marginBottom="8dp"
-            android:text="Check name"
-            android:layout_gravity="center_horizontal" />
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Сохранить"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/checkBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Проверить"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
 
         <Button
             android:id="@+id/delBtn"
-            android:layout_width="175dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="176dp"
-            android:text="Delete"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Удалить имя"
+            android:layout_marginBottom="24dp"/>
 
         <!-- Разделитель -->
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="2dp"
             android:background="#CCCCCC"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="24dp"/>
 
-        <!-- Новые элементы для базы данных -->
+        <!-- Секция Базы данных -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Работа с базой данных"
             android:textStyle="bold"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:layout_marginBottom="16dp"/>
 
+        <!-- Поля ввода данных -->
         <EditText
             android:id="@+id/dbName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Имя пользователя для БД"
+            android:hint="Имя пользователя"
             android:inputType="text"
             android:layout_marginBottom="8dp"/>
 
@@ -103,6 +114,7 @@
             android:inputType="textPostalAddress"
             android:layout_marginBottom="16dp"/>
 
+        <!-- Кнопки управления БД -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -126,15 +138,16 @@
                 android:layout_marginStart="4dp"/>
         </LinearLayout>
 
-        <!-- Новое поле для поиска -->
+        <!-- Поле поиска -->
         <EditText
             android:id="@+id/searchName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Введите имя для поиска"
             android:inputType="text"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="16dp"/>
 
+        <!-- Кнопки обновления и удаления -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -165,15 +178,15 @@
             android:layout_height="wrap_content"
             android:hint="Введите ID для удаления"
             android:inputType="number"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="16dp"/>
 
-        <!-- TextView для отображения информации о пользователе -->
+        <!-- Область результатов -->
         <TextView
             android:id="@+id/userInfoText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#F5F5F5"
-            android:padding="8dp"
+            android:padding="12dp"
             android:textSize="14sp"
             android:minHeight="100dp"
             android:scrollbars="vertical"
