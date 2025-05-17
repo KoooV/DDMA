@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         mediaPlayer = new MediaPlayer();
         try {
-            mediaPlayer.setDataSource("https://rus.hitmotop.com/get/music/20181205/Fever_Ray_-_If_I_Had_A_Heart_60748384.mp3");
+            mediaPlayer.setDataSource("https://rus.hitmotop.com/song/47872796/Korn_-_Freak_On_a_Leash_47872796.mp3");
             mediaPlayer.prepare();
         } catch (IOException e) {
             e.printStackTrace();
